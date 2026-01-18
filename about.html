@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Director | Moneer Ahmed's Medical House</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. A. Ahmed",
+      "affiliation": { "@type": "MedicalClinic", "name": "Moneer Ahmed's Medical House" }
+    }
+    </script>
+</head>
+<body>
+    <div id="mobileMenu" class="mobile-nav-overlay">
+        <button onclick="toggleMobileMenu()" class="close-btn">&times;</button>
+        <a href="index.html">The Desk</a>
+        <a href="journal.html">The Journal</a>
+        <a href="about.html">Clinical Director</a>
+        <a href="contact.html">Correspondence</a>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="brand-overline">Biography & Philosophy</span>
+            <h1 class="masthead-title">The Clinical Director</h1>
+            
+            <div class="header-controls">
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+                <nav class="desktop-nav">
+                    <a href="index.html">The Desk</a>
+                    <a href="journal.html">The Journal</a>
+                    <a href="about.html">Clinical Director</a>
+                    <a href="contact.html">Correspondence</a>
+                </nav>
+                <button onclick="toggleTheme()" class="utility-btn" id="theme-btn-svg" aria-label="Toggle Theme"></button>
+            </div>
+        </header>
+
+        <!-- RESTORED: BIO HERO -->
+        <section class="hero" style="text-align: left; max-width: 900px; display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;">
+            <div style="aspect-ratio: 4/5; background: var(--ad-bg); border-top: 4px solid var(--accent-gold);"></div>
+            <div>
+                <span class="brand-overline">Lead Consultant & Custodian</span>
+                <h2 style="font-size:2.5rem; text-align: left; margin-bottom: 1rem;">Dr. A. Ahmed, MBBS</h2>
+                <p>A graduate of the prestigious Dow University of Health Sciences and currently undergoing membership training with the Royal College of General Practitioners (International).</p>
+                <p style="margin-top:1rem;">"Dr. Ahmed advocates for a Bio-Psycho-Social model of care, viewing the patient not as a collection of symptoms, but as a complex biological system requiring precision, empathy, and evidence-based foresight."</p>
+            </div>
+        </section>
+
+        <!-- RESTORED: HERITAGE TIMELINE -->
+        <section class="timeline-container">
+            <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--text-navy); text-align: center; margin-bottom: 4rem;">A Legacy of Chemical Precision (Est. 1900)</h3>
+            <div class="timeline-line"></div>
+
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">1900s • Agra</span>
+                <p><strong>Moneer Ahmed</strong> establishes the family tradition in the precision trade of Tobacco, grounding the family name in quality and commerce.</p>
+            </div>
+
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">1947 • Hyderabad</span>
+                <p><strong>Haneef Ahmed & Nisaar Ahmed</strong> re-establish the House, pivoting to the delicate chemistry of Perfumery.</p>
+            </div>
+
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">1996 • Karachi</span>
+                <p><strong>Ishraq Ahmed</strong> founds Madina Perfumery House, cementing the family’s reputation for integrity.</p>
+            </div>
+
+            <div class="timeline-event">
+                <div class="timeline-dot"></div>
+                <span class="timeline-date">Present Day</span>
+                <p><strong>Dr. A. Ahmed</strong> transcends the trade of goods to the service of life, establishing the Medical House.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="disclaimer-box">
+                <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the 'Office of the Lead Consultant' prior to publication. Consult your primary care physician regarding specific health concerns.</p>
+            </div>
+            <p>&copy; 2026 Moneer Ahmed’s Medical House.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

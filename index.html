@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Desk | Moneer Ahmed's Medical House</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Moneer Ahmed's Medical House",
+      "founder": { "@type": "Person", "name": "Dr. A. Ahmed" },
+      "parentOrganization": { "@type": "Organization", "name": "The House of Noora" }
+    }
+    </script>
+</head>
+<body>
+    <div id="mobileMenu" class="mobile-nav-overlay">
+        <button onclick="toggleMobileMenu()" class="close-btn">&times;</button>
+        <a href="index.html">The Desk</a>
+        <a href="journal.html">The Journal</a>
+        <a href="about.html">Clinical Director</a>
+        <a href="contact.html">Correspondence</a>
+        <button onclick="toggleTheme()" class="utility-btn" style="margin-top:2rem; display:block;">Toggle Theme</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <span class="brand-overline">Est. 2026 • The House of Noora</span>
+            <h1 class="masthead-title">Moneer Ahmed’s<br>Medical House</h1>
+            
+            <div class="header-controls">
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+                <nav class="desktop-nav">
+                    <a href="index.html">The Desk</a>
+                    <a href="journal.html">The Journal</a>
+                    <a href="about.html">Clinical Director</a>
+                    <a href="contact.html">Correspondence</a>
+                </nav>
+                <button onclick="toggleTheme()" class="utility-btn" id="theme-btn-svg" aria-label="Toggle Theme"></button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h2>"The physician must treat the patient who has the disease, not just the disease the patient has."</h2>
+            <p>An archive of clinical knowledge curated for the discerning patient, adhering to the rigorous standards of the Royal Colleges.</p>
+        </section>
+
+        <main class="journal-grid">
+            <article class="card">
+                <span class="meta-tag">Internal Medicine • Jan 14, 2026</span>
+                <h3>The Aristocracy of the Heart</h3>
+                <p>An examination of vascular resistance and the 'Silent Killer' in the modern age.</p>
+                <a href="article-template.html" class="read-more">Read Manuscript</a>
+            </article>
+
+            <div class="ad-slot">
+                <span class="ad-label">Institutional Partner</span>
+                <p style="font-family: var(--font-heading); font-style: italic; color: #aaa;">AdSense Space</p>
+            </div>
+
+            <article class="card">
+                <span class="meta-tag">Neurology • Jan 10, 2026</span>
+                <h3>Cognitive Longevity</h3>
+                <p>Beyond the Mediterranean Diet: Neuroprotective habits of the centenarians.</p>
+                <a href="article-template.html" class="read-more">Read Manuscript</a>
+            </article>
+        </main>
+
+        <footer>
+            <div class="disclaimer-box">
+                <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the 'Office of the Lead Consultant' prior to publication. Consult your primary care physician regarding specific health concerns.</p>
+            </div>
+            <p>&copy; 2026 Moneer Ahmed’s Medical House.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
