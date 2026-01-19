@@ -132,13 +132,13 @@ article.card {
 }
 article.card h3 { font-family: var(--font-heading); font-size: 1.6rem; color: var(--text-navy); margin: 1rem 0; }
 .meta-tag { font-size: 0.7rem; text-transform: uppercase; color: var(--text-meta); letter-spacing: 1px; display: block; }
-.read-more { font-size: 0.8rem; text-transform: uppercase; font-weight: 700; border-bottom: 1px solid var(--accent-gold); padding-bottom: 3px; }
+.read-more { font-size: 0.8rem; text-transform: uppercase; font-weight: 550; border-bottom: 1px solid var(--accent-gold); padding-bottom: 3px; }
 
 /* AD SLOTS */
 .ad-slot { 
     background: var(--ad-bg); border: 1px solid var(--border-color); 
     display: flex; flex-direction: column; justify-content: center; align-items: center; 
-    padding: 2rem; text-align: center; height: 50%; min-height: 250px;
+    padding: 2rem; text-align: center; height: 60%; min-height: 250px;
 }
 .ad-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-meta); margin-bottom: 1rem; }
 
