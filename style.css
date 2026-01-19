@@ -3,14 +3,14 @@
 
 :root {
     /* Day Mode */
-    --bg-paper: #F9F8F4;        /* Rich Parchment Background */
-    --bg-card: #FFFFFF;         /* Pure White Cards (Subtle Contrast) */
-    --text-primary: #1B2631;    /* Deep Charcoal */
-    --text-navy: #0C1B33;       /* Oxford Navy */
+    --bg-paper: #F2F0E9;
+    --bg-card: #FAF9F6;
+    --text-primary: #1B2631;
+    --text-navy: #0C1B33;
     --text-meta: #666666;
-    --border-color: #E0E0E0;
-    --accent-gold: #C5A059;     /* Muted Gold */
-    --ad-bg: #F4F1EA;           /* Ad Background */
+    --border-color: #D1C7B7;
+    --accent-gold: #C5A059;
+    --ad-bg: #EAE6DC;
     
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Merriweather', serif;
@@ -18,40 +18,35 @@
 
 body.dark-mode {
     /* Nocturnal Study Mode */
-    --bg-paper: #001122;        /* Deep Oxford Blue */
-    --bg-card: #0A1A29;         /* Lighter Blue Card */
-    --text-primary: #F5F5F0;    /* Ivory */
-    --text-navy: #EAEAEA;       /* Soft White */
+    --bg-paper: #001122;
+    --bg-card: #0A1A29;
+    --text-primary: #F5F5F0;
+    --text-navy: #EAEAEA;
     --text-meta: #AAB7C4;
     --border-color: #1F3A52;
-    --accent-gold: #D4AF37;     /* Vibrant Gold */
+    --accent-gold: #D4AF37;
     --ad-bg: #0B2036;
 }
 
-/* BASE */
+/* BASE & UTILITIES */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
     background-color: var(--bg-paper);
     color: var(--text-primary);
     font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.7;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
 }
-
 a { text-decoration: none; color: var(--text-navy); transition: color 0.3s ease; }
-a:hover { color: var(--accent-gold); }
-
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-/* HEADER */
+/* HEADER & NAV */
 header {
     text-align: center;
     padding: 4rem 0 2rem;
     border-bottom: 1px solid var(--text-navy);
     margin-bottom: 4rem;
-    transition: border-color 0.3s ease;
 }
 body.dark-mode header { border-bottom-color: var(--accent-gold); }
 
@@ -59,41 +54,72 @@ body.dark-mode header { border-bottom-color: var(--accent-gold); }
     font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px;
     color: var(--accent-gold); font-weight: 700; display: block; margin-bottom: 1rem;
 }
-
 .masthead-title {
     font-family: var(--font-heading); font-size: 3.5rem; color: var(--text-navy);
     line-height: 1.1; margin-bottom: 0.5rem;
 }
-
-/* NAVIGATION */
 .header-controls { display: flex; justify-content: center; align-items: center; gap: 3rem; margin-top: 2rem; }
 
 nav.desktop-nav a {
     text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;
-    font-weight: 700; margin: 0 1rem; color: var(--text-navy); position: relative; padding-bottom: 5px;
+    font-weight: 700; margin: 0 1rem; color: var(--text-navy); position: relative;
 }
-
 nav.desktop-nav a.active-page { color: var(--accent-gold) !important; }
-nav.desktop-nav a.active-page::after {
-    content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: var(--accent-gold);
-}
 
+/* UTILITY BUTTONS */
 .utility-btn {
     background: none; border: 1px solid var(--border-color); color: var(--text-navy);
-    width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease;
+    width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.3s;
 }
-.utility-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
-.mobile-menu-btn { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-navy); }
 
-/* JOURNAL FILTERS */
-.filter-bar { display: flex; justify-content: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; }
-.filter-btn {
-    background: none; border: none; font-family: var(--font-heading); font-size: 1rem;
-    cursor: pointer; color: var(--text-meta); transition: all 0.3s ease; padding-bottom: 5px;
+/* Redundant menu button hidden on desktop by default */
+.mobile-menu-btn {
+    display: none; 
+    background: none; 
+    border: none; 
+    font-size: 1.8rem; 
+    color: var(--text-navy); 
+    cursor: pointer;
 }
-.filter-btn:hover, .filter-btn.active { color: var(--text-navy); border-bottom: 2px solid var(--accent-gold); }
-.filterDiv { display: none; } /* Hidden by default */
-.show { display: block; }     /* Shown when filtered */
+
+/* HERO & INTRO SECTIONS */
+.hero { 
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto 5rem; 
+    padding: 0 1rem;
+}
+
+/* JOURNAL FILTERS (Restored Structure) */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    /* Restored the grounding line */
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--text-meta);
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    color: var(--text-navy);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.filterDiv { display: none; }
+.show { display: block; }
 
 /* GRID & CARDS */
 .journal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-bottom: 6rem; }
@@ -112,9 +138,10 @@ article.card h3 { font-family: var(--font-heading); font-size: 1.6rem; color: va
 .ad-slot { 
     background: var(--ad-bg); border: 1px solid var(--border-color); 
     display: flex; flex-direction: column; justify-content: center; align-items: center; 
-    padding: 2rem; text-align: center; height: 100%; min-height: 250px;
+    padding: 2rem; text-align: center; height: 50%; min-height: 250px;
 }
 .ad-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-meta); margin-bottom: 1rem; }
+
 
 /* ARTICLE TEMPLATE SPECIFICS */
 .article-layout { display: grid; grid-template-columns: 2.5fr 1fr; gap: 4rem; margin-bottom: 6rem; }
@@ -131,7 +158,7 @@ article.card h3 { font-family: var(--font-heading); font-size: 1.6rem; color: va
 .reference-list { list-style: none; color: var(--text-meta); }
 .reference-list li { margin-bottom: 0.8rem; border-bottom: 1px dashed var(--border-color); padding-bottom: 0.5rem; }
 
-/* ABOUT & CONTACT RESTORATION */
+/* ABOUT*/
 .hero { text-align: center; max-width: 800px; margin: 0 auto 5rem; }
 .timeline-container { position: relative; max-width: 800px; margin: 6rem auto; padding: 2rem 0; }
 .timeline-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--border-color); transform: translateX(-50%); }
@@ -148,21 +175,67 @@ article.card h3 { font-family: var(--font-heading); font-size: 1.6rem; color: va
 .submit-btn { background-color: var(--text-navy); color: #fff; border: none; padding: 15px 30px; font-family: var(--font-heading); font-size: 1rem; cursor: pointer; width: 100%; transition: background 0.3s; }
 .submit-btn:hover { background-color: var(--accent-gold); }
 
+
+/* FORM & BUTTON REFINEMENT */
+.form-container { 
+    max-width: 600px; margin: 0 auto 6rem; background: var(--ad-bg); 
+    padding: 3rem; border: 1px solid var(--border-color); 
+    border-top: 4px solid var(--accent-gold); 
+}
+.form-group { margin-bottom: 2rem; }
+.form-group label { display: block; font-family: var(--font-heading); color: var(--text-navy); margin-bottom: 0.5rem; }
+.form-group input, .form-group select, .form-group textarea { 
+    width: 100%; padding: 15px; background: var(--bg-paper); 
+    border: 1px solid var(--border-color); color: var(--text-primary); 
+    font-family: var(--font-body); 
+}
+
+/* THE BUTTON FIX (Deep Parchment in Dark Mode) */
+.submit-btn { 
+    background-color: var(--text-navy); 
+    color: var(--bg-paper); 
+    border: none; 
+    padding: 18px 30px; 
+    font-family: var(--font-heading); 
+    font-size: 1.1rem; 
+    cursor: pointer; 
+    width: 100%; 
+    transition: all 0.3s ease; 
+    display: block;
+}
+
+body.dark-mode .submit-btn {
+    background-color: #F2F0E9; /* Deep Parchment */
+    color: #001122;           /* Dark text */
+}
+
+.submit-btn:hover, body.dark-mode .submit-btn:hover { 
+    background-color: var(--accent-gold) !important; 
+    color: #001122 !important; 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
 /* FOOTER */
 footer { border-top: 1px solid var(--border-color); padding: 4rem 0; text-align: center; color: var(--text-meta); font-size: 0.85rem; }
 .disclaimer-box { width: 80%; margin: 0 auto 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-color); }
 
-/* MOBILE */
-.mobile-nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-paper); z-index: 999; display: none; flex-direction: column; justify-content: center; align-items: center; }
-.mobile-nav-overlay.active { display: flex; }
-.close-btn { position: absolute; top: 2rem; right: 2rem; font-size: 3rem; background: none; border: none; color: var(--text-navy); }
+/* MOBILE OVERLAY */
+.mobile-nav-overlay { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: var(--bg-paper); z-index: 1000; 
+    display: none; flex-direction: column; justify-content: center; align-items: center;
+    opacity: 0; transition: opacity 0.4s ease;
+}
+.mobile-nav-overlay.active { display: flex; opacity: 1; }
+.mobile-nav-overlay a { font-family: var(--font-heading); font-size: 2.2rem; margin: 1.5rem 0; color: var(--text-navy); }
+.close-btn { position: absolute; top: 2rem; right: 2rem; font-size: 3rem; background: none; border: none; color: var(--text-navy); cursor: pointer; }
+
+/* RESPONSIVE BREAKPOINTS */
 @media (max-width: 768px) {
     .container { padding: 0 1.5rem; }
-    nav.desktop-nav, #theme-btn-svg { display: none; }
+    nav.desktop-nav, #theme-btn-desktop { display: none; }
     .mobile-menu-btn { display: block; }
     .journal-grid { grid-template-columns: 1fr; }
-    .article-layout { grid-template-columns: 1fr; }
-    .timeline-line { left: 20px; }
-    .timeline-event { width: 100%; left: 0 !important; text-align: left !important; padding-left: 3rem !important; }
-    .timeline-dot { left: 15px !important; }
+    .masthead-title { font-size: 2.5rem; }
 }
