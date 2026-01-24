@@ -1,95 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Director | Moneer Ahmed's Medical House</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr. A. Ahmed",
-      "affiliation": { "@type": "MedicalClinic", "name": "Moneer Ahmed's Medical House" }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meet Dr. A. Ahmed, MBBS - Lead Consultant at Moneer Ahmed's Medical House. Graduate of Dow University, RCGP International member. Specializing in Bio-Psycho-Social care and preventive medicine.">
+<meta name="keywords" content="Dr. A. Ahmed, MBBS, Dow University, Royal College General Practitioners, Bio-Psycho-Social model, Karachi physician, medical expertise, preventive medicine">
+<meta name="author" content="Dr. A. Ahmed, MBBS">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://moneerahmedhouse.com/about.html">
+<title>Clinical Director | Dr. A. Ahmed, MBBS - Moneer Ahmed's Medical House</title>
+
+<!-- CRITICAL CSS -->
+<style>
+:root{--bg-paper:#F2F0E9;--bg-card:#FAF9F6;--text-primary:#1B2631;--text-navy:#0C1B33;--text-meta:#666;--border-color:#D1C7B7;--accent-gold:#C5A059;--ad-bg:#EAE6DC;--font-heading:'Playfair Display',serif;--font-body:'Merriweather',serif}
+body.dark-mode{--bg-paper:#001122;--bg-card:#0A1A29;--text-primary:#F5F5F0;--text-navy:#EAEAEA;--text-meta:#AAB7C4;--border-color:#1F3A52;--accent-gold:#D4AF37;--ad-bg:#0B2036}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-paper);color:var(--text-primary);font-family:var(--font-body);font-size:18px;line-height:1.7;transition:background-color .4s,color .4s}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-navy);margin-bottom:4rem}
+.masthead-title{font-family:var(--font-heading);font-size:3.5rem;color:var(--text-navy);line-height:1.1;margin-bottom:.5rem}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script>
+(function(){const t=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;(t==='dark'||(!t&&d))&&document.body.classList.add('dark-mode');})();
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+
+<!-- Enhanced Structured Data for E-E-A-T -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Physician",
+    "name": "Dr. A. Ahmed",
+    "honorificPrefix": "Dr.",
+    "honorificSuffix": "MBBS",
+    "jobTitle": "Lead Consultant",
+    "description": "Medical doctor specializing in metabolic health and preventive medicine, advocating for a Bio-Psycho-Social model of patient care.",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Dow University of Health Sciences",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karachi",
+        "@addressCountry": "PK"
+      }
+    },
+    "memberOf": {
+      "@type": "MedicalOrganization",
+      "name": "Royal College of General Practitioners (International)",
+      "url": "https://www.rcgp.org.uk"
+    },
+    "affiliation": {
+      "@type": "MedicalBusiness",
+      "name": "Moneer Ahmed's Medical House",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Clifton/Defence Consultation Chambers",
+        "addressLocality": "Karachi",
+        "addressRegion": "Sindh",
+        "postalCode": "75500",
+        "addressCountry": "PK"
+      }
+    },
+    "medicalSpecialty": ["Primary Care", "Lifestyle Medicine", "Preventive Medicine"],
+    "knowsAbout": ["Metabolic Health", "Bio-Psycho-Social Care", "Evidence-Based Medicine", "Preventive Medicine"],
+    "url": "https://moneerahmedhouse.com/about.html"
+  },
+  "url": "https://moneerahmedhouse.com/about.html",
+  "name": "About Dr. A. Ahmed"
+}
+</script>
 </head>
+
 <body>
-    <div id="mobileMenu" class="mobile-nav-overlay">
-        <button onclick="toggleMobileMenu()" class="close-btn">&times;</button>
+<!-- Mobile Navigation -->
+<nav id="mobileMenu" class="mobile-nav-overlay" aria-label="Mobile navigation">
+  <button onclick="toggleMobileMenu()" class="close-btn" aria-label="Close menu">&times;</button>
+  <a href="index.html">The Desk</a>
+  <a href="journal.html">The Journal</a>
+  <a href="about.html" aria-current="page">Clinical Director</a>
+  <a href="contact.html">Correspondence</a>
+  <button onclick="toggleTheme()" class="utility-btn theme-btn-icon" aria-label="Toggle dark mode"></button>
+</nav>
+
+<div class="container">
+  <!-- Header -->
+  <header>
+    <span class="brand-overline">Biography & Philosophy</span>
+    <h1 class="masthead-title">The Clinical Director</h1>
+    
+    <div class="header-controls">
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      
+      <nav class="desktop-nav" aria-label="Main navigation">
         <a href="index.html">The Desk</a>
         <a href="journal.html">The Journal</a>
-        <a href="about.html">Clinical Director</a>
+        <a href="about.html" class="active-page" aria-current="page">Clinical Director</a>
         <a href="contact.html">Correspondence</a>
+      </nav>
+      
+      <button onclick="toggleTheme()" class="utility-btn theme-btn-icon" id="theme-btn-desktop" aria-label="Toggle dark mode"></button>
     </div>
+  </header>
 
-    <div class="container">
-        <header>
-            <span class="brand-overline">Biography & Philosophy</span>
-            <h1 class="masthead-title">The Clinical Director</h1>
-            
-            <div class="header-controls">
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
-                <nav class="desktop-nav">
-                    <a href="index.html">The Desk</a>
-                    <a href="journal.html">The Journal</a>
-                    <a href="about.html">Clinical Director</a>
-                    <a href="contact.html">Correspondence</a>
-                </nav>
-                <button onclick="toggleTheme()" class="utility-btn" id="theme-btn-svg" aria-label="Toggle Theme"></button>
-            </div>
-        </header>
-
-        <!-- RESTORED: BIO HERO -->
-        <section class="hero" style="text-align: left; max-width: 900px; display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center;">
-            <div style="aspect-ratio: 4/5; background: var(--ad-bg); border-top: 4px solid var(--accent-gold);"></div>
-            <div>
-                <span class="brand-overline">Lead Consultant & Custodian</span>
-                <h2 style="font-size:2.5rem; text-align: left; margin-bottom: 1rem;">Dr. A. Ahmed, MBBS</h2>
-                <p>A graduate of the prestigious Dow University of Health Sciences and currently undergoing membership training with the Royal College of General Practitioners (International).</p>
-                <p style="margin-top:1rem;">"Dr. Ahmed advocates for a Bio-Psycho-Social model of care, viewing the patient not as a collection of symptoms, but as a complex biological system requiring precision, empathy, and evidence-based foresight."</p>
-            </div>
-        </section>
-
-        <!-- RESTORED: HERITAGE TIMELINE -->
-        <section class="timeline-container">
-            <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--text-navy); text-align: center; margin-bottom: 4rem;">A Legacy of Chemical Precision (Est. 1900)</h3>
-            <div class="timeline-line"></div>
-
-            <div class="timeline-event">
-                <div class="timeline-dot"></div>
-                <span class="timeline-date">1900s • Agra</span>
-                <p><strong>Moneer Ahmed</strong> establishes the family tradition in the precision trade of Tobacco, grounding the family name in quality and commerce.</p>
-            </div>
-
-            <div class="timeline-event">
-                <div class="timeline-dot"></div>
-                <span class="timeline-date">1947 • Hyderabad</span>
-                <p><strong>Haneef Ahmed & Nisaar Ahmed</strong> re-establish the House, pivoting to the delicate chemistry of Perfumery.</p>
-            </div>
-
-            <div class="timeline-event">
-                <div class="timeline-dot"></div>
-                <span class="timeline-date">1996 • Karachi</span>
-                <p><strong>Ishraq Ahmed</strong> founds Madina Perfumery House, cementing the family’s reputation for integrity.</p>
-            </div>
-
-            <div class="timeline-event">
-                <div class="timeline-dot"></div>
-                <span class="timeline-date">Present Day</span>
-                <p><strong>Dr. A. Ahmed</strong> transcends the trade of goods to the service of life, establishing the Medical House.</p>
-            </div>
-        </section>
-
-        <footer>
-            <div class="disclaimer-box">
-                <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the 'Office of the Lead Consultant' prior to publication. Consult your primary care physician regarding specific health concerns.</p>
-            </div>
-            <p>&copy; 2026 Moneer Ahmed’s Medical House.</p>
-        </footer>
+  <!-- Biography Section -->
+  <section class="hero bio-hero" itemscope itemtype="https://schema.org/Physician">
+    <div class="bio-content">
+      <span class="brand-overline">Lead Consultant & Custodian</span>
+      <h2 itemprop="name">Dr. A. Ahmed, <span itemprop="credential">MBBS</span></h2>
+      
+      <p itemprop="description">A graduate of the prestigious <span itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization"><span itemprop="name">Dow University of Health Sciences</span></span> and currently undergoing membership training with the <span itemprop="memberOf" itemscope itemtype="https://schema.org/MedicalOrganization"><span itemprop="name">Royal College of General Practitioners (International)</span></span>.</p>
+      
+      <blockquote>
+        <p>"Dr. Ahmed advocates for a Bio-Psycho-Social model of care, viewing the patient not as a collection of symptoms, but as a complex biological system requiring precision, empathy, and evidence-based foresight."</p>
+      </blockquote>
+      
+      <meta itemprop="medicalSpecialty" content="Primary Care">
+      <meta itemprop="medicalSpecialty" content="Lifestyle Medicine">
+      <meta itemprop="medicalSpecialty" content="Preventive Medicine">
     </div>
-    <script src="script.js"></script>
+  </section>
+
+  <!-- Family Legacy Timeline -->
+  <section class="timeline-container" aria-labelledby="timeline-heading">
+    <h3 id="timeline-heading" class="timeline-title">A Legacy of Chemical Precision (Est. 1900)</h3>
+    
+    <div class="timeline-line" aria-hidden="true"></div>
+    
+    <article class="timeline-event">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <span class="timeline-date">1900s • Agra</span>
+      <p><strong>Moneer Ahmed</strong> establishes the family tradition in the precision trade of Tobacco, grounding the family name in quality and commerce.</p>
+    </article>
+    
+    <article class="timeline-event">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <span class="timeline-date">1947 • Hyderabad</span>
+      <p><strong>Haneef Ahmed & Nisaar Ahmed</strong> re-establish the House, pivoting to the delicate chemistry of Perfumery.</p>
+    </article>
+    
+    <article class="timeline-event">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <span class="timeline-date">1996 • Karachi</span>
+      <p><strong>Ishraq Ahmed</strong> founds Madina Perfumery House, cementing the family's reputation for integrity.</p>
+    </article>
+    
+    <article class="timeline-event">
+      <div class="timeline-dot" aria-hidden="true"></div>
+      <span class="timeline-date">Present Day</span>
+      <p><strong>Dr. A. Ahmed</strong> transcends the trade of goods to the service of life, establishing the Medical House.</p>
+    </article>
+  </section>
+
+  <!-- Expertise Statement for E-E-A-T -->
+  <section class="author-expertise" style="max-width: 800px; margin: 4rem auto;">
+    <h3>Medical Philosophy & Expertise</h3>
+    <p>Dr. Ahmed's approach to medicine is rooted in the Bio-Psycho-Social model, recognizing that optimal health outcomes require attention to biological factors, psychological well-being, and social determinants of health. His practice emphasizes:</p>
+    <ul style="margin-left: 2rem; margin-top: 1rem;">
+      <li>Evidence-based clinical decision making</li>
+      <li>Patient-centered care with emphasis on health literacy</li>
+      <li>Preventive medicine and lifestyle interventions</li>
+      <li>Adherence to Royal College clinical standards</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="disclaimer-box">
+      <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the Office of the Lead Consultant prior to publication. Consult your primary care physician regarding specific health concerns. This content should not replace professional medical judgment.</p>
+    </div>
+    <p>&copy; 2026 Moneer Ahmed's Medical House. All rights reserved.</p>
+  </footer>
+</div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
