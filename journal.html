@@ -1,99 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Journal | Moneer Ahmed's Medical House</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Browse clinical manuscripts from Moneer Ahmed's Medical House. Filter by specialty: Cardiology, Neurology, Preventive Medicine. Evidence-based health content reviewed by Dr. A. Ahmed, MBBS.">
+<meta name="keywords" content="medical journal, clinical manuscripts, cardiology articles, neurology content, preventive medicine, Dr. A. Ahmed, YMYL health">
+<meta name="author" content="Dr. A. Ahmed, MBBS">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://moneerahmedhouse.com/journal.html">
+<title>The Journal | Moneer Ahmed's Medical House - Clinical Archives</title>
+
+<!-- CRITICAL CSS -->
+<style>
+:root{--bg-paper:#F2F0E9;--bg-card:#FAF9F6;--text-primary:#1B2631;--text-navy:#0C1B33;--text-meta:#666;--border-color:#D1C7B7;--accent-gold:#C5A059;--ad-bg:#EAE6DC;--font-heading:'Playfair Display',serif;--font-body:'Merriweather',serif}
+body.dark-mode{--bg-paper:#001122;--bg-card:#0A1A29;--text-primary:#F5F5F0;--text-navy:#EAEAEA;--text-meta:#AAB7C4;--border-color:#1F3A52;--accent-gold:#D4AF37;--ad-bg:#0B2036}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-paper);color:var(--text-primary);font-family:var(--font-body);font-size:18px;line-height:1.7;transition:background-color .4s,color .4s}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-navy);margin-bottom:4rem}
+.masthead-title{font-family:var(--font-heading);font-size:3.5rem;color:var(--text-navy);line-height:1.1;margin-bottom:.5rem}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script>
+(function(){const t=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;(t==='dark'||(!t&&d))&&document.body.classList.add('dark-mode');})();
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "The Journal - Clinical Archives",
+  "description": "Browse evidence-based clinical manuscripts organized by medical specialty",
+  "url": "https://moneerahmedhouse.com/journal.html",
+  "publisher": {
+    "@type": "MedicalBusiness",
+    "name": "Moneer Ahmed's Medical House"
+  },
+  "medicalAudience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patient"
+  }
+}
+</script>
 </head>
+
 <body>
-    <div id="mobileMenu" class="mobile-nav-overlay">
-        <button onclick="toggleMobileMenu()" class="close-btn">&times;</button>
+<!-- Mobile Navigation Overlay -->
+<nav id="mobileMenu" class="mobile-nav-overlay" aria-label="Mobile navigation">
+  <button onclick="toggleMobileMenu()" class="close-btn" aria-label="Close menu">&times;</button>
+  <a href="index.html">The Desk</a>
+  <a href="journal.html" aria-current="page">The Journal</a>
+  <a href="about.html">Clinical Director</a>
+  <a href="contact.html">Correspondence</a>
+  <button onclick="toggleTheme()" class="utility-btn theme-btn-icon" aria-label="Toggle dark mode"></button>
+</nav>
+
+<div class="container">
+  <!-- Header -->
+  <header>
+    <span class="brand-overline">Clinical Archives & Taxonomy</span>
+    <h1 class="masthead-title">The Journal</h1>
+    
+    <div class="header-controls">
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      
+      <nav class="desktop-nav" aria-label="Main navigation">
         <a href="index.html">The Desk</a>
-        <a href="journal.html">The Journal</a>
+        <a href="journal.html" class="active-page" aria-current="page">The Journal</a>
         <a href="about.html">Clinical Director</a>
         <a href="contact.html">Correspondence</a>
+      </nav>
+      
+      <button onclick="toggleTheme()" class="utility-btn theme-btn-icon" id="theme-btn-desktop" aria-label="Toggle dark mode"></button>
     </div>
+  </header>
 
-    <div class="container">
-        <header>
-            <span class="brand-overline">Clinical Archives & Taxonomy</span>
-            <h1 class="masthead-title">The Journal</h1>
-            
-            <div class="header-controls">
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
-                <nav class="desktop-nav">
-                    <a href="index.html">The Desk</a>
-                    <a href="journal.html">The Journal</a>
-                    <a href="about.html">Clinical Director</a>
-                    <a href="contact.html">Correspondence</a>
-                </nav>
-                <button onclick="toggleTheme()" class="utility-btn" id="theme-btn-svg" aria-label="Toggle Theme"></button>
-            </div>
-        </header>
+  <!-- Filter Bar -->
+  <nav class="filter-bar" aria-label="Filter articles by category">
+    <button class="filter-btn active" onclick="filterSelection('all')" aria-label="Show all articles">All Manuscripts</button>
+    <button class="filter-btn" onclick="filterSelection('cardiology')" aria-label="Show cardiology articles">Cardiology</button>
+    <button class="filter-btn" onclick="filterSelection('neurology')" aria-label="Show neurology articles">Neurology</button>
+    <button class="filter-btn" onclick="filterSelection('preventive')" aria-label="Show preventive medicine articles">Preventive</button>
+  </nav>
 
-        <!-- RESTORED: THE TAXONOMY BAR -->
-        <div class="filter-bar">
-            <button class="filter-btn active" onclick="filterSelection('all')">All Manuscripts</button>
-            <button class="filter-btn" onclick="filterSelection('cardiology')">Cardiology</button>
-            <button class="filter-btn" onclick="filterSelection('neurology')">Neurology</button>
-            <button class="filter-btn" onclick="filterSelection('preventive')">Preventive</button>
-        </div>
+  <!-- Article Grid with Working Filters -->
+  <main class="journal-grid">
+    <!-- CARDIOLOGY ARTICLE 1 -->
+    <article class="card filterDiv cardiology all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2026-01-14" itemprop="datePublished">Internal Medicine • Jan 14, 2026</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">The Aristocracy of the Heart</a>
+      </h3>
+      <p itemprop="description">An examination of vascular resistance and the 'Silent Killer' in the modern age.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read manuscript: The Aristocracy of the Heart">Read Manuscript</a>
+    </article>
 
-        <main class="journal-grid">
-            <!-- Article 1 -->
-            <article class="card filterDiv cardiology">
-                <span class="meta-tag">Internal Medicine • Jan 14, 2026</span>
-                <h3>The Aristocracy of the Heart</h3>
-                <p>An examination of vascular resistance and the 'Silent Killer' in the modern age.</p>
-                <a href="article-template.html" class="read-more">Read Manuscript</a>
-            </article>
+    <!-- AD SLOT 1 -->
+    <aside class="ad-slot filterDiv all" aria-label="Advertisement">
+      <span class="ad-label">Institutional Partner</span>
+      <div class="ad-placeholder">
+        <!-- AdSense code here -->
+        AdSense Placement
+      </div>
+    </aside>
 
-            <!-- SEAMLESS AD SLOT 1 -->
-            <div class="ad-slot filterDiv all">
-                <span class="ad-label">Institutional Partner</span>
-                <div style="font-family: var(--font-heading); font-style: italic; opacity: 0.4;">AdSense Placement</div>
-            </div>
+    <!-- NEUROLOGY ARTICLE 1 -->
+    <article class="card filterDiv neurology all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2026-01-10" itemprop="datePublished">Neurology • Jan 10, 2026</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">Cognitive Longevity</a>
+      </h3>
+      <p itemprop="description">Beyond the Mediterranean Diet: Neuroprotective habits of the centenarians.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read manuscript: Cognitive Longevity">Read Manuscript</a>
+    </article>
 
-            <!-- Article 2 -->
-            <article class="card filterDiv neurology">
-                <span class="meta-tag">Neurology • Jan 10, 2026</span>
-                <h3>Cognitive Longevity</h3>
-                <p>Beyond the Mediterranean Diet: Neuroprotective habits of the centenarians.</p>
-                <a href="article-template.html" class="read-more">Read Manuscript</a>
-            </article>
+    <!-- PREVENTIVE ARTICLE 1 -->
+    <article class="card filterDiv preventive all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2026-01-05" itemprop="datePublished">Preventive • Jan 05, 2026</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">The Winter Constitution</a>
+      </h3>
+      <p itemprop="description">A rigorous protocol for immunity during the damp months of the North.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read manuscript: The Winter Constitution">Read Manuscript</a>
+    </article>
 
-            <!-- Article 3 -->
-            <article class="card filterDiv preventive">
-                <span class="meta-tag">Preventive • Jan 05, 2026</span>
-                <h3>The Winter Constitution</h3>
-                <p>A rigorous protocol for immunity during the damp months of the North.</p>
-                <a href="article-template.html" class="read-more">Read Manuscript</a>
-            </article>
+    <!-- AD SLOT 2 -->
+    <aside class="ad-slot filterDiv all" aria-label="Advertisement">
+      <span class="ad-label">Educational Sponsor</span>
+      <div class="ad-placeholder">
+        <!-- AdSense code here -->
+        AdSense Placement
+      </div>
+    </aside>
 
-            <!-- SEAMLESS AD SLOT 2 -->
-            <div class="ad-slot filterDiv all">
-                <span class="ad-label">Educational Sponsor</span>
-                <div style="font-family: var(--font-heading); font-style: italic; opacity: 0.4;">AdSense Placement</div>
-            </div>
+    <!-- CARDIOLOGY ARTICLE 2 -->
+    <article class="card filterDiv cardiology all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2025-12-20" itemprop="datePublished">Cardiology • Dec 20, 2025</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">Arterial Integrity</a>
+      </h3>
+      <p itemprop="description">Longitudinal studies on the impact of refined sugars on the endothelium.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read manuscript: Arterial Integrity">Read Manuscript</a>
+    </article>
 
-            <!-- Article 4 -->
-            <article class="card filterDiv cardiology">
-                <span class="meta-tag">Cardiology • Dec 20, 2025</span>
-                <h3>Arterial Integrity</h3>
-                <p>Longitudinal studies on the impact of refined sugars on the endothelium.</p>
-                <a href="article-template.html" class="read-more">Read Manuscript</a>
-            </article>
-        </main>
+    <!-- NEUROLOGY ARTICLE 2 -->
+    <article class="card filterDiv neurology all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2025-12-15" itemprop="datePublished">Neurology • Dec 15, 2025</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">The Mind's Gymnasium</a>
+      </h3>
+      <p itemprop="description">Neuroplasticity and cognitive reserve through the lens of lifelong learning.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read manuscript: The Mind's Gymnasium">Read Manuscript</a>
+    </article>
 
-        <footer>
-            <div class="disclaimer-box">
-                <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the 'Office of the Lead Consultant' prior to publication. Consult your primary care physician regarding specific health concerns.</p>
-            </div>
-            <p>&copy; 2026 Moneer Ahmed’s Medical House.</p>
-        </footer>
+    <!-- PREVENTIVE ARTICLE 2 -->
+    <article class="card filterDiv preventive all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2025-12-08" itemprop="datePublished">Preventive • Dec 08, 2025</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">Sleep Architecture</a>
+      </h3>
+      <p itemprop="description">The overlooked pillar of metabolic health and cellular repair.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read manuscript: Sleep Architecture">Read Manuscript</a>
+    </article>
+
+    <!-- CARDIOLOGY ARTICLE 3 -->
+    <article class="card filterDiv cardiology all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2025-11-30" itemprop="datePublished">Cardiology • Nov 30, 2025</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">Cholesterol Clarity</a>
+      </h3>
+      <p itemprop="description">Distinguishing between oxidized and protective lipoproteins in cardiovascular health.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read manuscript: Cholesterol Clarity">Read Manuscript</a>
+    </article>
+
+    <!-- AD SLOT 3 -->
+    <aside class="ad-slot filterDiv all" aria-label="Advertisement">
+      <span class="ad-label">Clinical Partner</span>
+      <div class="ad-placeholder">
+        <!-- AdSense code here -->
+        AdSense Placement
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="disclaimer-box">
+      <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the Office of the Lead Consultant prior to publication. Consult your primary care physician regarding specific health concerns. This content should not replace professional medical judgment.</p>
     </div>
-    <script src="script.js"></script>
+    <p>&copy; 2026 Moneer Ahmed's Medical House. All rights reserved.</p>
+  </footer>
+</div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
