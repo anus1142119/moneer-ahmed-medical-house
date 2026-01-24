@@ -27,7 +27,7 @@ header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-
 
 <!-- Theme detection script (blocks render to prevent flicker) -->
 <script>
-(function(){const t=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;(t==='dark'||(!t&&d))&&document.documentElement.classList.add('dark');})();
+(function(){const t=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;(t==='dark'||(!t&&d))&&document.body.classList.add('dark-mode');})();
 </script>
 
 <!-- Load fonts optimally -->
@@ -41,8 +41,8 @@ header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Physician",
-  "name": "Dr. A. Ahmed",
+  "@type": "MedicalBusiness",
+  "name": "Moneer Ahmed's Medical House",
   "description": "Evidence-based medical knowledge platform providing clinical manuscripts on metabolic health, cardiology, and preventive medicine, curated by Dr. A. Ahmed, MBBS.",
   "url": "https://moneerahmedhouse.com",
   "logo": "https://moneerahmedhouse.com/logo.png",
@@ -79,9 +79,9 @@ header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
     "opens": "09:00",
-    "closes": "20:00"
+    "closes": "17:00"
   },
   "sameAs": [
     "https://www.linkedin.com/company/moneer-ahmed-medical-house"
