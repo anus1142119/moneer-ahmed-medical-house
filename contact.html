@@ -1,81 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Correspondence | Moneer Ahmed's Medical House</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Moneer Ahmed's Medical House for medical enquiries, consultations, or partnerships. All correspondence reviewed by Dr. A. Ahmed, MBBS. Located in Karachi, Sindh, Pakistan.">
+<meta name="keywords" content="contact Moneer Ahmed Medical House, Dr. A. Ahmed contact, medical enquiries Karachi, clinical consultation Pakistan, physician contact">
+<meta name="author" content="Dr. A. Ahmed, MBBS">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://moneerahmedhouse.com/contact.html">
+<title>Correspondence | Contact Moneer Ahmed's Medical House</title>
+
+<!-- CRITICAL CSS -->
+<style>
+:root{--bg-paper:#F2F0E9;--bg-card:#FAF9F6;--text-primary:#1B2631;--text-navy:#0C1B33;--text-meta:#666;--border-color:#D1C7B7;--accent-gold:#C5A059;--ad-bg:#EAE6DC;--font-heading:'Playfair Display',serif;--font-body:'Merriweather',serif}
+body.dark-mode{--bg-paper:#001122;--bg-card:#0A1A29;--text-primary:#F5F5F0;--text-navy:#EAEAEA;--text-meta:#AAB7C4;--border-color:#1F3A52;--accent-gold:#D4AF37;--ad-bg:#0B2036}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-paper);color:var(--text-primary);font-family:var(--font-body);font-size:18px;line-height:1.7;transition:background-color .4s,color .4s}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-navy);margin-bottom:4rem}
+.masthead-title{font-family:var(--font-heading);font-size:3.5rem;color:var(--text-navy);line-height:1.1;margin-bottom:.5rem}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script>
+(function(){const t=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;(t==='dark'||(!t&&d))&&document.body.classList.add('dark-mode');})();
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Correspondence - Moneer Ahmed's Medical House",
+  "description": "Contact page for enquiries and consultations at Moneer Ahmed's Medical House.",
+  "url": "https://moneerahmedhouse.com/contact.html",
+  "mainEntity": {
+    "@type": "MedicalBusiness",
+    "name": "Moneer Ahmed's Medical House",
+    "founder": {
+      "@type": "Physician",
+      "name": "Dr. A. Ahmed",
+      "credential": "MBBS"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+92-21-00000000",
+      "contactType": "customer service",
+      "areaServed": "PK",
+      "availableLanguage": ["English", "Urdu"],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Clifton/Defence Consultation Chambers",
+      "addressLocality": "Karachi",
+      "addressRegion": "Sindh",
+      "postalCode": "75500",
+      "addressCountry": "PK"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "24.8607",
+      "longitude": "67.0011"
+    }
+  }
+}
+</script>
 </head>
+
 <body>
-    <div id="mobileMenu" class="mobile-nav-overlay">
-        <button onclick="toggleMobileMenu()" class="close-btn">&times;</button>
+<!-- Mobile Navigation -->
+<nav id="mobileMenu" class="mobile-nav-overlay" aria-label="Mobile navigation">
+  <button onclick="toggleMobileMenu()" class="close-btn" aria-label="Close menu">&times;</button>
+  <a href="index.html">The Desk</a>
+  <a href="journal.html">The Journal</a>
+  <a href="about.html">Clinical Director</a>
+  <a href="contact.html" aria-current="page">Correspondence</a>
+  <button onclick="toggleTheme()" class="utility-btn theme-btn-icon" aria-label="Toggle dark mode"></button>
+</nav>
+
+<div class="container">
+  <!-- Header -->
+  <header>
+    <span class="brand-overline">The Secretariat</span>
+    <h1 class="masthead-title">Correspondence</h1>
+    
+    <div class="header-controls">
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+      
+      <nav class="desktop-nav" aria-label="Main navigation">
         <a href="index.html">The Desk</a>
         <a href="journal.html">The Journal</a>
         <a href="about.html">Clinical Director</a>
-        <a href="contact.html">Correspondence</a>
+        <a href="contact.html" class="active-page" aria-current="page">Correspondence</a>
+      </nav>
+      
+      <button onclick="toggleTheme()" class="utility-btn theme-btn-icon" id="theme-btn-desktop" aria-label="Toggle dark mode"></button>
     </div>
+  </header>
 
-    <div class="container">
-        <header>
-            <span class="brand-overline">The Secretariat</span>
-            <h1 class="masthead-title">Correspondence</h1>
-            
-            <div class="header-controls">
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
-                <nav class="desktop-nav">
-                    <a href="index.html">The Desk</a>
-                    <a href="journal.html">The Journal</a>
-                    <a href="about.html">Clinical Director</a>
-                    <a href="contact.html">Correspondence</a>
-                </nav>
-                <button onclick="toggleTheme()" class="utility-btn" id="theme-btn-svg" aria-label="Toggle Theme"></button>
-            </div>
-        </header>
+  <!-- Introduction -->
+  <section class="hero">
+    <p>The Office of the Clinical Director reviews all correspondence with due diligence. Please allow 48-72 hours for a considered response.</p>
+  </section>
 
-        <section class="hero">
-            <p>The Office of the Clinical Director reviews all correspondence with due diligence.</p>
-        </section>
-        
-        <!-- RESTORED: THE FULL FORM -->
-        <main class="form-container">
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="e.g. Mr. John Smith" required>
-                </div>
+  <!-- Contact Form -->
+  <main class="form-container">
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" aria-label="Contact form">
+      <div class="form-group">
+        <label for="name">Your Full Name <abbr title="required" aria-label="required">*</abbr></label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="e.g. Mr. John Smith" 
+          required
+          aria-required="true">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Return Address (Email) <abbr title="required" aria-label="required">*</abbr></label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="john.smith@example.com" 
+          required
+          aria-required="true">
+      </div>
+      
+      <div class="form-group">
+        <label for="nature">Nature of Enquiry</label>
+        <select id="nature" name="nature" aria-label="Select enquiry type">
+          <option value="General">General Enquiry</option>
+          <option value="Clinical">Clinical Consultation Request</option>
+          <option value="Academic">Academic / Press</option>
+          <option value="Institutional">Institutional Partnership</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">The Letter <abbr title="required" aria-label="required">*</abbr></label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="6" 
+          placeholder="Please articulate your query with clarity..." 
+          required
+          aria-required="true"></textarea>
+      </div>
+      
+      <p style="font-size: 0.85rem; color: var(--text-meta); margin-bottom: 1rem;">
+        <strong>Note:</strong> This form is for general enquiries only. For medical emergencies, please contact your local emergency services immediately.
+      </p>
+      
+      <button type="submit" class="submit-btn">Dispatch Correspondence</button>
+    </form>
+  </main>
 
-                <div class="form-group">
-                    <label for="email">Return Address (Email)</label>
-                    <input type="email" id="email" name="email" placeholder="john.smith@example.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="nature">Nature of Enquiry</label>
-                    <select id="nature" name="nature">
-                        <option value="General">General Enquiry</option>
-                        <option value="Clinical">Clinical Consultation Request</option>
-                        <option value="Academic">Academic / Press</option>
-                        <option value="Institutional">Institutional Partnership</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">The Letter</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Please articulate your query..." required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Dispatch Correspondence</button>
-            </form>
-        </main>
-
-        <footer>
-            <div class="disclaimer-box">
-                <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the 'Office of the Lead Consultant' prior to publication. Consult your primary care physician regarding specific health concerns.</p>
-            </div>
-            <p>&copy; 2026 Moneer Ahmed’s Medical House.</p>
-        </footer>
+  <!-- Additional Contact Information -->
+  <section style="max-width: 600px; margin: 4rem auto; text-align: center;">
+    <h2 style="font-family: var(--font-heading); color: var(--text-navy); margin-bottom: 1rem;">Alternative Contact Methods</h2>
+    
+    <div style="background: var(--ad-bg); padding: 2rem; border: 1px solid var(--border-color);">
+      <p><strong>Telephone:</strong> <a href="tel:+922100000000">+92-21-00000000</a></p>
+      <p style="margin-top: 0.5rem;"><strong>Operating Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM (PKT)</p>
+      <p style="margin-top: 1rem;"><strong>Address:</strong><br>
+      Clifton/Defence Consultation Chambers<br>
+      Karachi, Sindh 75500<br>
+      Pakistan</p>
     </div>
-    <script src="script.js"></script>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="disclaimer-box">
+      <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the Office of the Lead Consultant prior to publication. Consult your primary care physician regarding specific health concerns. This content should not replace professional medical judgment.</p>
+      <p style="margin-top: 1rem;"><strong>Privacy Notice:</strong> Information submitted through this contact form is handled in accordance with medical confidentiality standards and will not be shared with third parties without your explicit consent.</p>
+    </div>
+    <p>&copy; 2026 Moneer Ahmed's Medical House. All rights reserved.</p>
+  </footer>
+</div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
