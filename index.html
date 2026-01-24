@@ -1,84 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Desk | Moneer Ahmed's Medical House</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "name": "Moneer Ahmed's Medical House",
-      "founder": { "@type": "Person", "name": "Dr. A. Ahmed" },
-      "parentOrganization": { "@type": "Organization", "name": "The House of Noora" }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-based medical insights from Dr. A. Ahmed. Explore clinical manuscripts on metabolic health, cardiology, neurology, and preventive medicine adhering to Royal Colleges standards.">
+<meta name="keywords" content="medical journal, evidence-based medicine, Dr. A. Ahmed, metabolic health, cardiology, preventive medicine, YMYL health content">
+<meta name="author" content="Dr. A. Ahmed, MBBS">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://moneerahmedhouse.com/">
+<title>The Desk | Moneer Ahmed's Medical House - Evidence-Based Medical Knowledge</title>
+
+<!-- CRITICAL CSS: Renders instantly, prevents layout shift -->
+<style>
+:root{--bg-paper:#F2F0E9;--bg-card:#FAF9F6;--text-primary:#1B2631;--text-navy:#0C1B33;--text-meta:#666;--border-color:#D1C7B7;--accent-gold:#C5A059;--ad-bg:#EAE6DC;--font-heading:'Playfair Display',serif;--font-body:'Merriweather',serif}
+body.dark-mode{--bg-paper:#001122;--bg-card:#0A1A29;--text-primary:#F5F5F0;--text-navy:#EAEAEA;--text-meta:#AAB7C4;--border-color:#1F3A52;--accent-gold:#D4AF37;--ad-bg:#0B2036}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-paper);color:var(--text-primary);font-family:var(--font-body);font-size:18px;line-height:1.7;transition:background-color .4s,color .4s}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-navy);margin-bottom:4rem}
+.masthead-title{font-family:var(--font-heading);font-size:3.5rem;color:var(--text-navy);line-height:1.1;margin-bottom:.5rem}
+</style>
+
+<!-- Preconnect to font provider for faster loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Theme detection script (blocks render to prevent flicker) -->
+<script>
+(function(){const t=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;(t==='dark'||(!t&&d))&&document.documentElement.classList.add('dark');})();
+</script>
+
+<!-- Load fonts optimally -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<!-- Full stylesheet loaded asynchronously -->
+<link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
+
+<!-- Structured Data for E-E-A-T -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dr. A. Ahmed",
+  "description": "Evidence-based medical knowledge platform providing clinical manuscripts on metabolic health, cardiology, and preventive medicine, curated by Dr. A. Ahmed, MBBS.",
+  "url": "https://moneerahmedhouse.com",
+  "logo": "https://moneerahmedhouse.com/logo.png",
+  "image": "https://moneerahmedhouse.com/og-image.jpg",
+  "telephone": "+92-21-00000000",
+  "email": "director@moneerahmedhouse.com",
+  "medicalSpecialty": ["Primary Care", "Preventive Medicine", "Lifestyle Medicine"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Clifton/Defence Consultation Chambers",
+    "addressLocality": "Karachi",
+    "addressRegion": "Sindh",
+    "postalCode": "75500",
+    "addressCountry": "PK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "24.8607",
+    "longitude": "67.0011"
+  },
+  "founder": {
+    "@type": "Physician",
+    "name": "Dr. A. Ahmed",
+    "jobTitle": "Lead Consultant",
+    "credential": "MBBS",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Dow University of Health Sciences"
+    },
+    "memberOf": {
+      "@type": "MedicalOrganization",
+      "name": "Royal College of General Practitioners (International)"
     }
-    </script>
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "09:00",
+    "closes": "20:00"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/moneer-ahmed-medical-house"
+  ]
+}
+</script>
 </head>
+
 <body>
-    <div id="mobileMenu" class="mobile-nav-overlay">
-        <button onclick="toggleMobileMenu()" class="close-btn">&times;</button>
-        <a href="index.html">The Desk</a>
+<!-- Mobile Navigation Overlay -->
+<nav id="mobileMenu" class="mobile-nav-overlay" aria-label="Mobile navigation menu">
+  <button onclick="toggleMobileMenu()" class="close-btn" aria-label="Close mobile menu">&times;</button>
+  <a href="index.html" aria-current="page">The Desk</a>
+  <a href="journal.html">The Journal</a>
+  <a href="about.html">Clinical Director</a>
+  <a href="contact.html">Correspondence</a>
+  <button onclick="toggleTheme()" class="utility-btn theme-btn-icon" aria-label="Toggle dark mode"></button>
+</nav>
+
+<div class="container">
+  <!-- Site Header -->
+  <header>
+    <span class="brand-overline">Est. 2026 • The House of Noora</span>
+    <h1 class="masthead-title">Moneer Ahmed's<br>Medical House</h1>
+    
+    <div class="header-controls">
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open mobile menu" aria-expanded="false">&#9776;</button>
+      
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html" class="active-page" aria-current="page">The Desk</a>
         <a href="journal.html">The Journal</a>
         <a href="about.html">Clinical Director</a>
         <a href="contact.html">Correspondence</a>
-        <button onclick="toggleTheme()" class="utility-btn" style="margin-top:2rem; display:block;">Toggle Theme</button>
+      </nav>
+      
+      <button onclick="toggleTheme()" class="utility-btn theme-btn-icon" id="theme-btn-desktop" aria-label="Toggle dark mode"></button>
     </div>
+  </header>
 
-    <div class="container">
-        <header>
-            <span class="brand-overline">Est. 2026 • The House of Noora</span>
-            <h1 class="masthead-title">Moneer Ahmed’s<br>Medical House</h1>
-            
-            <div class="header-controls">
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
-                <nav class="desktop-nav">
-                    <a href="index.html">The Desk</a>
-                    <a href="journal.html">The Journal</a>
-                    <a href="about.html">Clinical Director</a>
-                    <a href="contact.html">Correspondence</a>
-                </nav>
-                <button onclick="toggleTheme()" class="utility-btn" id="theme-btn-svg" aria-label="Toggle Theme"></button>
-            </div>
-        </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>"The physician must treat the patient who has the disease, not just the disease the patient has."</h2>
+    <p>An archive of clinical knowledge curated for the discerning patient, adhering to the rigorous standards of the Royal Colleges.</p>
+  </section>
 
-        <section class="hero">
-            <h2>"The physician must treat the patient who has the disease, not just the disease the patient has."</h2>
-            <p>An archive of clinical knowledge curated for the discerning patient, adhering to the rigorous standards of the Royal Colleges.</p>
-        </section>
+  <!-- Main Content: Article Grid -->
+  <main class="journal-grid">
+    <article class="card" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2026-01-14" itemprop="datePublished">Internal Medicine • Jan 14, 2026</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">The Aristocracy of the Heart</a>
+      </h3>
+      <p itemprop="description">An examination of vascular resistance and the 'Silent Killer' in the modern age.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read full manuscript: The Aristocracy of the Heart">Read Manuscript</a>
+    </article>
 
-        <main class="journal-grid">
-            <article class="card">
-                <span class="meta-tag">Internal Medicine • Jan 14, 2026</span>
-                <h3>The Aristocracy of the Heart</h3>
-                <p>An examination of vascular resistance and the 'Silent Killer' in the modern age.</p>
-                <a href="article-template.html" class="read-more">Read Manuscript</a>
-            </article>
+    <aside class="ad-slot" aria-label="Advertisement">
+      <span class="ad-label">Institutional Partner</span>
+      <div class="ad-placeholder">
+        <!-- AdSense code here -->
+        <p>AdSense Space</p>
+      </div>
+    </aside>
 
-            <div class="ad-slot">
-                <span class="ad-label">Institutional Partner</span>
-                <p style="font-family: var(--font-heading); font-style: italic; color: #aaa;">AdSense Space</p>
-            </div>
+    <article class="card" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2026-01-10" itemprop="datePublished">Neurology • Jan 10, 2026</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">Cognitive Longevity</a>
+      </h3>
+      <p itemprop="description">Beyond the Mediterranean Diet: Neuroprotective habits of the centenarians.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read full manuscript: Cognitive Longevity">Read Manuscript</a>
+    </article>
 
-            <article class="card">
-                <span class="meta-tag">Neurology • Jan 10, 2026</span>
-                <h3>Cognitive Longevity</h3>
-                <p>Beyond the Mediterranean Diet: Neuroprotective habits of the centenarians.</p>
-                <a href="article-template.html" class="read-more">Read Manuscript</a>
-            </article>
-        </main>
+    <article class="card" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2026-01-05" itemprop="datePublished">Cardiology • Jan 05, 2026</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">Arterial Integrity</a>
+      </h3>
+      <p itemprop="description">Longitudinal studies on the impact of refined sugars on the endothelium.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read full manuscript: Arterial Integrity">Read Manuscript</a>
+    </article>
 
-        <footer>
-            <div class="disclaimer-box">
-                <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the 'Office of the Lead Consultant' prior to publication. Consult your primary care physician regarding specific health concerns.</p>
-            </div>
-            <p>&copy; 2026 Moneer Ahmed’s Medical House.</p>
-        </footer>
+    <aside class="ad-slot" aria-label="Advertisement">
+      <span class="ad-label">Educational Sponsor</span>
+      <div class="ad-placeholder">
+        <!-- AdSense code here -->
+        <p>AdSense Space</p>
+      </div>
+    </aside>
+
+    <article class="card" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2025-12-28" itemprop="datePublished">Preventive • Dec 28, 2025</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="article-template.html" itemprop="url">The Winter Constitution</a>
+      </h3>
+      <p itemprop="description">Strengthening immunity through the cold months without succumbing to hysteria.</p>
+      <a href="article-template.html" class="read-more" aria-label="Read full manuscript: The Winter Constitution">Read Manuscript</a>
+    </article>
+  </main>
+
+  <!-- Footer with Medical Disclaimer -->
+  <footer>
+    <div class="disclaimer-box">
+      <p><strong>Medical Disclaimer:</strong> The content provided within this journal is for educational and informational purposes only and does not constitute medical advice, diagnosis, or treatment. All clinical insights are reviewed by the Office of the Lead Consultant prior to publication. Consult your primary care physician regarding specific health concerns. This content should not replace professional medical judgment.</p>
     </div>
-    <script src="script.js" defer></script>
+    <p>&copy; 2026 Moneer Ahmed's Medical House. All rights reserved.</p>
+  </footer>
+</div>
+
+<!-- Load JavaScript -->
+<script src="script.js" defer></script>
 </body>
-
 </html>
-
