@@ -1,0 +1,37 @@
+# Moneer Ahmed's Medical House - Robots.txt
+# This file tells search engines how to crawl your site
+
+# Allow all search engines to crawl everything
+User-agent: *
+Allow: /
+
+# Sitemap location (for Google, Bing, etc.)
+Sitemap: https://moneerahmedhouse.com/sitemap.xml
+
+# Allow search engines to access CSS and JavaScript (important for rendering)
+Allow: /style.css
+Allow: /script.js
+
+# Block access to any future admin or private directories (optional - uncomment if needed)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay (optional - prevents aggressive crawling)
+# Crawl-delay: 1
+
+# Specific rules for common bots (all allowed by default)
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# Yahoo
+User-agent: Slurp
+Allow: /
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
