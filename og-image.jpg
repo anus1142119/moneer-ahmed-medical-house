@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OG Image - Moneer Ahmed's Medical House</title>
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Georgia, serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.og-image-container {
+  background: #F2F0E9;
+  width: 1200px;
+  height: 630px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* Decorative border */
+.og-border {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border: 3px solid #0C1B33;
+  pointer-events: none;
+}
+
+/* Inner accent border */
+.og-border::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #C5A059;
+}
+
+/* Content area */
+.og-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* Brand overline */
+.og-overline {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: #C5A059;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Main title */
+.og-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 72px;
+  color: #0C1B33;
+  line-height: 1.1;
+  margin: 0 0 30px 0;
+  font-weight: 700;
+}
+
+/* Tagline */
+.og-tagline {
+  font-size: 28px;
+  color: #1B2631;
+  font-style: italic;
+  line-height: 1.4;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+/* Author credit */
+.og-author {
+  font-size: 20px;
+  color: #666666;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 40px;
+}
+
+.og-author strong {
+  color: #0C1B33;
+  font-weight: 700;
+}
+
+/* Decorative elements */
+.og-decoration-top,
+.og-decoration-bottom {
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C5A059, transparent);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.og-decoration-top {
+  top: 80px;
+}
+
+.og-decoration-bottom {
+  bottom: 80px;
+}
+
+/* Medical symbol (optional decorative element) */
+.medical-symbol {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.1;
+}
+
+.medical-symbol svg {
+  width: 100%;
+  height: 100%;
+  fill: #0C1B33;
+}
+
+/* Instructions panel */
+.instructions {
+  margin-top: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 1200px;
+}
+
+.instructions h2 {
+  color: #0C1B33;
+  margin-top: 0;
+}
+
+.instructions code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: #C5A059;
+}
+
+.instructions ol {
+  line-height: 1.8;
+}
+
+.instructions .warning {
+  background: #fff3cd;
+  border-left: 4px solid #C5A059;
+  padding: 15px;
+  margin: 20px 0;
+}
+</style>
+</head>
+<body>
+
+<!-- OG Image Preview (1200x630px) -->
+<div>
+  <div class="og-image-container" id="ogImage">
+    <div class="og-border"></div>
+    
+    <div class="medical-symbol">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12,2 L12,22 M8,8 Q12,10 12,12 T8,16 M16,8 Q12,10 12,12 T16,16"/>
+        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </div>
+    
+    <div class="og-decoration-top"></div>
+    
+    <div class="og-content">
+      <div class="og-overline">Est. 2026 • The House of Noora</div>
+      
+      <h1 class="og-title">Moneer Ahmed's<br>Medical House</h1>
+      
+      <p class="og-tagline">Evidence-based clinical knowledge curated for the discerning patient, adhering to the rigorous standards of the Royal Colleges</p>
+      
+      <div class="og-author">By <strong>Dr. A. Ahmed, MBBS</strong></div>
+    </div>
+    
+    <div class="og-decoration-bottom"></div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    <h2>📸 How to Create Your og-image.jpg</h2>
+    
+    <div class="warning">
+      <strong>⚠️ Important:</strong> This is a visual reference. You need to create the actual image file using the methods below.
+    </div>
+    
+    <h3>Method 1: Screenshot (Easiest - 2 Minutes)</h3>
+    <ol>
+      <li>Open this page in your browser</li>
+      <li>Press <code>F11</code> to go fullscreen</li>
+      <li>Use a screenshot tool to capture ONLY the beige card above (1200x630px area)</li>
+      <li>Crop to exactly 1200x630 pixels</li>
+      <li>Save as <code>og-image.jpg</code></li>
+      <li>Place in root directory (same folder as index.html)</li>
+    </ol>
+    
+    <h3>Method 2: Design Tool (Best Quality - 10 Minutes)</h3>
+    <ol>
+      <li><strong>Canva</strong> (Free)
+        <ul>
+          <li>Go to canva.com</li>
+          <li>Create custom size: 1200 x 630 px</li>
+          <li>Background: #F2F0E9</li>
+          <li>Add text matching design above</li>
+          <li>Download as JPG</li>
+        </ul>
+      </li>
+      <li><strong>Figma</strong> (Free)
+        <ul>
+          <li>Create 1200x630px frame</li>
+          <li>Design matching the preview above</li>
+          <li>Export as JPG (quality: 90%)</li>
+        </ul>
+      </li>
+      <li><strong>Photoshop/GIMP</strong>
+        <ul>
+          <li>New document: 1200x630px, 72 DPI</li>
+          <li>Recreate design</li>
+          <li>Save for Web (JPG, quality 80-90%)</li>
+        </ul>
+      </li>
+    </ol>
+    
+    <h3>Method 3: Use AI Generator (5 Minutes)</h3>
+    <ol>
+      <li>Go to <strong>Bannerbear.com</strong> or <strong>Placid.app</strong></li>
+      <li>Create template: 1200x630px</li>
+      <li>Match colors and text from above</li>
+      <li>Generate and download</li>
+    </ol>
+    
+    <h3>Design Specifications:</h3>
+    <ul>
+      <li><strong>Dimensions:</strong> Exactly 1200 x 630 pixels</li>
+      <li><strong>Background Color:</strong> #F2F0E9 (parchment)</li>
+      <li><strong>Border Color:</strong> #0C1B33 (navy blue)</li>
+      <li><strong>Accent Color:</strong> #C5A059 (gold)</li>
+      <li><strong>Main Title Font:</strong> Playfair Display (or Georgia fallback)</li>
+      <li><strong>Title Size:</strong> 72px</li>
+      <li><strong>Body Font:</strong> Georgia or Merriweather</li>
+      <li><strong>File Format:</strong> JPG (not PNG)</li>
+      <li><strong>File Size:</strong> Under 300KB</li>
+      <li><strong>File Name:</strong> og-image.jpg (all lowercase)</li>
+    </ul>
+    
+    <h3>Where to Place the File:</h3>
+    <pre style="background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto;">
+your-website/
+├── index.html
+├── journal.html
+├── about.html
+├── contact.html
+├── article-template.html
+├── favicon.svg
+├── og-image.jpg     ← PUT IT HERE (root directory)
+├── robots.txt
+├── style.css
+└── script.js
+    </pre>
+    
+    <h3>Testing Your OG Image:</h3>
+    <ol>
+      <li>Upload <code>og-image.jpg</code> to your root directory</li>
+      <li>Go to: <a href="https://www.opengraph.xyz/" target="_blank">opengraph.xyz</a></li>
+      <li>Enter: <code>https://yourdomain.com/og-image.jpg</code></li>
+      <li>See preview of how it looks when shared</li>
+    </ol>
+    
+    <h3>Quick Quality Checklist:</h3>
+    <ul>
+      <li>✅ Dimensions: 1200x630px (verify with image properties)</li>
+      <li>✅ Text is readable (not too small)</li>
+      <li>✅ Brand colors match (#F2F0E9, #0C1B33, #C5A059)</li>
+      <li>✅ File size under 300KB (compress if needed)</li>
+      <li>✅ Saved as JPG (not PNG)</li>
+      <li>✅ File named exactly: og-image.jpg</li>
+      <li>✅ Placed in root directory</li>
+    </ul>
+    
+    <h3>Alternative: Simple Text-Only Version</h3>
+    <p>If you want something even simpler, create a 1200x630px image with:</p>
+    <ul>
+      <li>Parchment background (#F2F0E9)</li>
+      <li>Centered text: "Moneer Ahmed's Medical House"</li>
+      <li>Subtitle: "Evidence-Based Medical Knowledge"</li>
+      <li>Author line: "Dr. A. Ahmed, MBBS"</li>
+    </ul>
+    
+    <p><strong>That's it! Once created, your social media shares will look professional and branded.</strong> 🎉</p>
+  </div>
+</div>
+
+</body>
+</html>
