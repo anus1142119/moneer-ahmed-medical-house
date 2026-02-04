@@ -13,12 +13,16 @@
 <!-- CRITICAL CSS: Renders instantly, prevents layout shift -->
 <style>
 :root{--bg-paper:#F2F0E9;--bg-card:#FAF9F6;--text-primary:#1B2631;--text-navy:#0C1B33;--text-meta:#666;--border-color:#D1C7B7;--accent-gold:#C5A059;--ad-bg:#EAE6DC;--font-heading:'Playfair Display',serif;--font-body:'Merriweather',serif}
-body.dark-mode{--bg-paper:#001122;--bg-card:#0A1A29;--text-primary:#F5F5F0;--text-navy:#EAEAEA;--text-meta:#AAB7C4;--border-color:#1F3A52;--accent-gold:#D4AF37;--ad-bg:#0B2036}
+body.dark-mode,html.dark-mode{--bg-paper:#001122;--bg-card:#0A1A29;--text-primary:#F5F5F0;--text-navy:#EAEAEA;--text-meta:#AAB7C4;--border-color:#1F3A52;--accent-gold:#D4AF37;--ad-bg:#0B2036}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg-paper);color:var(--text-primary);font-family:var(--font-body);font-size:18px;line-height:1.7;transition:background-color .4s,color .4s}
+html{background:var(--bg-paper)}
+body{background:var(--bg-paper);color:var(--text-primary);font-family:var(--font-body),Georgia,'Times New Roman',serif;font-size:18px;line-height:1.7;transition:background-color .4s,color .4s}
 .container{max-width:1200px;margin:0 auto;padding:0 2rem}
 header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-navy);margin-bottom:4rem}
 .masthead-title{font-family:var(--font-heading);font-size:3.5rem;color:var(--text-navy);line-height:1.1;margin-bottom:.5rem}
+a{text-decoration:none;color:var(--text-navy)}
+.card,.ad-slot{background:var(--bg-card);padding:2rem;border:1px solid var(--border-color)}
+.journal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
 </style>
 
 <!-- Preconnect to font provider for faster loading -->
@@ -33,9 +37,8 @@ header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-
 <!-- Load fonts optimally -->
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-<!-- Full stylesheet loaded asynchronously -->
-<link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="style.css"></noscript>
+<!-- Full stylesheet - loaded synchronously to prevent FOUC -->
+<link rel="stylesheet" href="style.css">
 
 <!-- Structured Data for E-E-A-T -->
 <script type="application/ld+json">
