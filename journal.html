@@ -3,74 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Journal | Moneer Ahmed's Medical House - Clinical Archives</title>
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
-<!-- DNS Prefetch & Preconnect -->
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- Theme Detection (MUST run before body renders) -->
-<script>
-(function(){const t=localStorage.getItem('house_theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;(t==='dark'||(!t&&d))&&document.documentElement.classList.add('dark-mode');})();
-</script>
-
-<!-- CRITICAL CSS - Expanded for zero FOUC -->
-<style>
-:root{--bg-paper:#F2F0E9;--bg-card:#FAF9F6;--text-primary:#1B2631;--text-navy:#0C1B33;--text-meta:#666;--border-color:#D1C7B7;--accent-gold:#C5A059;--ad-bg:#EAE6DC;--font-heading:'Playfair Display',serif;--font-body:'Merriweather',serif;--spacing-xs:.5rem;--spacing-sm:1rem;--spacing-md:2rem;--spacing-lg:4rem;--spacing-xl:6rem;--max-width:1200px;--transition-fast:.3s ease;--transition-slow:.4s ease}
-html.dark-mode,html.dark-mode body{--bg-paper:#001122;--bg-card:#0A1A29;--text-primary:#F5F5F0;--text-navy:#EAEAEA;--text-meta:#AAB7C4;--border-color:#1F3A52;--accent-gold:#D4AF37;--ad-bg:#0B2036}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{background:var(--bg-paper)}
-body{background:var(--bg-paper);color:var(--text-primary);font-family:var(--font-body),Georgia,'Times New Roman',serif;font-size:18px;line-height:1.7;transition:background-color var(--transition-slow),color var(--transition-slow);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-a{text-decoration:none;color:var(--text-navy);transition:color var(--transition-fast)}
-.container{max-width:var(--max-width);margin:0 auto;padding:0 var(--spacing-md)}
-header{text-align:center;padding:var(--spacing-lg) 0 var(--spacing-md);border-bottom:1px solid var(--text-navy);margin-bottom:var(--spacing-lg)}
-html.dark-mode header{border-bottom-color:var(--accent-gold)}
-.brand-overline{font-size:.75rem;text-transform:uppercase;letter-spacing:3px;color:var(--accent-gold);font-weight:700;display:block;margin-bottom:var(--spacing-sm)}
-.masthead-title{font-family:var(--font-heading),Georgia,serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--text-navy);line-height:1.1;margin-bottom:.5rem}
-.header-controls{display:flex;justify-content:center;align-items:center;gap:3rem;margin-top:var(--spacing-md)}
-nav.desktop-nav{display:flex;gap:var(--spacing-md)}
-nav.desktop-nav a{text-transform:uppercase;font-size:.8rem;letter-spacing:2px;font-weight:700;color:var(--text-navy);position:relative}
-nav.desktop-nav a.active-page{color:var(--accent-gold)}
-.utility-btn{background:none;border:1px solid var(--border-color);color:var(--text-navy);width:45px;height:45px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all var(--transition-fast)}
-.mobile-menu-btn{display:none;background:none;border:none;font-size:1.8rem;color:var(--text-navy);cursor:pointer}
-.filter-bar{display:flex;justify-content:center;gap:var(--spacing-md);margin-bottom:var(--spacing-lg);border-bottom:1px solid var(--border-color);padding-bottom:var(--spacing-sm);flex-wrap:wrap}
-.filter-btn{background:none;border:none;font-family:var(--font-heading),Georgia,serif;font-size:1rem;cursor:pointer;color:var(--text-meta);transition:all var(--transition-fast);padding-bottom:5px;border-bottom:2px solid transparent}
-.filter-btn:hover,.filter-btn.active{color:var(--text-navy);border-bottom-color:var(--accent-gold)}
-.journal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;margin-bottom:var(--spacing-xl)}
-@media(min-width:768px){.journal-grid{grid-template-columns:repeat(3,1fr)}}
-article.card{border-top:3px solid var(--accent-gold);padding:var(--spacing-md) 1.5rem;background:var(--bg-card);box-shadow:0 4px 6px rgba(0,0,0,.02);transition:transform var(--transition-fast),box-shadow var(--transition-fast)}
-article.card h3{font-family:var(--font-heading),Georgia,serif;font-size:1.6rem;color:var(--text-navy);margin:var(--spacing-sm) 0;line-height:1.3}
-article.card h3 a{color:inherit}
-article.card p{margin:var(--spacing-sm) 0;color:var(--text-primary)}
-.meta-tag{font-size:.7rem;text-transform:uppercase;color:var(--text-meta);letter-spacing:1px;display:block}
-.read-more{display:inline-block;margin-top:var(--spacing-sm);font-size:.8rem;text-transform:uppercase;font-weight:600;color:var(--text-navy);border-bottom:1px solid var(--accent-gold);padding-bottom:3px}
-.ad-slot{background:var(--ad-bg);border:1px solid var(--border-color);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:var(--spacing-md);text-align:center;min-height:250px}
-.ad-label{font-size:.6rem;text-transform:uppercase;letter-spacing:2px;color:var(--text-meta);margin-bottom:var(--spacing-sm)}
-.filterDiv{display:none}
-.filterDiv.show{display:block}
-.mobile-nav-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg-paper);z-index:1000;display:none;flex-direction:column;justify-content:center;align-items:center;opacity:0;transition:opacity var(--transition-slow)}
-.mobile-nav-overlay.active{display:flex;opacity:1}
-.mobile-nav-overlay a{font-family:var(--font-heading),Georgia,serif;font-size:2.2rem;margin:1.5rem 0;color:var(--text-navy)}
-.close-btn{position:absolute;top:var(--spacing-md);right:var(--spacing-md);font-size:3rem;background:none;border:none;color:var(--text-navy);cursor:pointer;line-height:1}
-@media(max-width:768px){.container{padding:0 1.5rem}nav.desktop-nav,#theme-btn-desktop{display:none}.mobile-menu-btn{display:block}.journal-grid{grid-template-columns:1fr;gap:var(--spacing-md)}}
-</style>
-
-<!-- Web Fonts with display=swap -->
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-<!-- Full Stylesheet (async) -->
-<link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="style.css"></noscript>
-
-<!-- SEO Meta -->
 <meta name="description" content="Browse clinical manuscripts from Moneer Ahmed's Medical House. Filter by specialty: Cardiology, Neurology, Preventive Medicine. Evidence-based health content reviewed by Dr. A. Ahmed, MBBS.">
 <meta name="keywords" content="medical journal, clinical manuscripts, cardiology articles, neurology content, preventive medicine, Dr. A. Ahmed, YMYL health">
 <meta name="author" content="Dr. A. Ahmed, MBBS">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://moneerahmedhouse.com/journal.html">
+<title>The Journal | Moneer Ahmed's Medical House - Clinical Archives</title>
+
+<!-- CRITICAL CSS -->
+<style>
+:root{--bg-paper:#F2F0E9;--bg-card:#FAF9F6;--text-primary:#1B2631;--text-navy:#0C1B33;--text-meta:#666;--border-color:#D1C7B7;--accent-gold:#C5A059;--ad-bg:#EAE6DC;--font-heading:'Playfair Display',serif;--font-body:'Merriweather',serif}
+body.dark-mode,html.dark-mode{--bg-paper:#001122;--bg-card:#0A1A29;--text-primary:#F5F5F0;--text-navy:#EAEAEA;--text-meta:#AAB7C4;--border-color:#1F3A52;--accent-gold:#D4AF37;--ad-bg:#0B2036}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg-paper)}
+body{background:var(--bg-paper);color:var(--text-primary);font-family:var(--font-body),Georgia,'Times New Roman',serif;font-size:18px;line-height:1.7;transition:background-color .4s,color .4s}
+.container{max-width:1200px;margin:0 auto;padding:0 2rem}
+header{text-align:center;padding:4rem 0 2rem;border-bottom:1px solid var(--text-navy);margin-bottom:4rem}
+.masthead-title{font-family:var(--font-heading);font-size:3.5rem;color:var(--text-navy);line-height:1.1;margin-bottom:.5rem}
+a{text-decoration:none;color:var(--text-navy)}
+.card,.ad-slot{background:var(--bg-card);padding:2rem;border:1px solid var(--border-color)}
+.journal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.filter-bar{display:flex;gap:1rem;margin-bottom:3rem;flex-wrap:wrap}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<script>
+(function(){const t=localStorage.getItem('house_theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;(t==='dark'||(!t&&d))&&document.documentElement.classList.add('dark-mode');})();
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <!-- Structured Data -->
 <script type="application/ld+json">
@@ -127,12 +91,24 @@ article.card p{margin:var(--spacing-sm) 0;color:var(--text-primary)}
   <nav class="filter-bar" aria-label="Filter articles by category">
     <button class="filter-btn active" onclick="filterSelection('all')" aria-label="Show all articles">All Manuscripts</button>
     <button class="filter-btn" onclick="filterSelection('cardiology')" aria-label="Show cardiology articles">Cardiology</button>
-    <button class="filter-btn" onclick="filterSelection('neurology')" aria-label="Show neurology articles">Neurology</button>
+    <button class="filter-btn" onclick="filterSelection('longevity')" aria-label="Show longevity articles">Longevity</button>
     <button class="filter-btn" onclick="filterSelection('preventive')" aria-label="Show preventive medicine articles">Preventive</button>
   </nav>
 
   <!-- Article Grid with Working Filters -->
   <main class="journal-grid">
+    <!-- LONGEVITY ARTICLE 1 - NEW -->
+    <article class="card filterDiv longevity all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+      <span class="meta-tag">
+        <time datetime="2026-01-28" itemprop="datePublished">Longevity • Jan 28, 2026</time>
+      </span>
+      <h3 itemprop="headline">
+        <a href="insulin-resistance-modern-lifestyle.html" itemprop="url">Insulin Resistance in the Modern Lifestyle</a>
+      </h3>
+      <p itemprop="description">A clinical examination of insulin resistance caused by sedentary lifestyle and evidence-based protocols for reversal.</p>
+      <a href="insulin-resistance-modern-lifestyle.html" class="read-more" aria-label="Read manuscript: Insulin Resistance in the Modern Lifestyle">Read Manuscript</a>
+    </article>
+
     <!-- CARDIOLOGY ARTICLE 1 -->
     <article class="card filterDiv cardiology all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
       <span class="meta-tag">
@@ -148,13 +124,16 @@ article.card p{margin:var(--spacing-sm) 0;color:var(--text-primary)}
     <!-- AD SLOT 1 -->
     <aside class="ad-slot filterDiv all" aria-label="Advertisement">
       <span class="ad-label">Institutional Partner</span>
-      <div class="ad-placeholder">AdSense Placement</div>
+      <div class="ad-placeholder">
+        <!-- AdSense code here -->
+        AdSense Placement
+      </div>
     </aside>
 
-    <!-- NEUROLOGY ARTICLE 1 -->
-    <article class="card filterDiv neurology all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+    <!-- LONGEVITY ARTICLE 2 -->
+    <article class="card filterDiv longevity all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
       <span class="meta-tag">
-        <time datetime="2026-01-10" itemprop="datePublished">Neurology • Jan 10, 2026</time>
+        <time datetime="2026-01-10" itemprop="datePublished">Longevity • Jan 10, 2026</time>
       </span>
       <h3 itemprop="headline">
         <a href="article-template.html" itemprop="url">Cognitive Longevity</a>
@@ -178,7 +157,10 @@ article.card p{margin:var(--spacing-sm) 0;color:var(--text-primary)}
     <!-- AD SLOT 2 -->
     <aside class="ad-slot filterDiv all" aria-label="Advertisement">
       <span class="ad-label">Educational Sponsor</span>
-      <div class="ad-placeholder">AdSense Placement</div>
+      <div class="ad-placeholder">
+        <!-- AdSense code here -->
+        AdSense Placement
+      </div>
     </aside>
 
     <!-- CARDIOLOGY ARTICLE 2 -->
@@ -193,10 +175,10 @@ article.card p{margin:var(--spacing-sm) 0;color:var(--text-primary)}
       <a href="article-template.html" class="read-more" aria-label="Read manuscript: Arterial Integrity">Read Manuscript</a>
     </article>
 
-    <!-- NEUROLOGY ARTICLE 2 -->
-    <article class="card filterDiv neurology all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
+    <!-- LONGEVITY ARTICLE 3 -->
+    <article class="card filterDiv longevity all" itemscope itemtype="https://schema.org/MedicalScholarlyArticle">
       <span class="meta-tag">
-        <time datetime="2025-12-15" itemprop="datePublished">Neurology • Dec 15, 2025</time>
+        <time datetime="2025-12-15" itemprop="datePublished">Longevity • Dec 15, 2025</time>
       </span>
       <h3 itemprop="headline">
         <a href="article-template.html" itemprop="url">The Mind's Gymnasium</a>
@@ -232,7 +214,10 @@ article.card p{margin:var(--spacing-sm) 0;color:var(--text-primary)}
     <!-- AD SLOT 3 -->
     <aside class="ad-slot filterDiv all" aria-label="Advertisement">
       <span class="ad-label">Clinical Partner</span>
-      <div class="ad-placeholder">AdSense Placement</div>
+      <div class="ad-placeholder">
+        <!-- AdSense code here -->
+        AdSense Placement
+      </div>
     </aside>
   </main>
 
@@ -248,4 +233,3 @@ article.card p{margin:var(--spacing-sm) 0;color:var(--text-primary)}
 <script src="script.js" defer></script>
 </body>
 </html>
-
