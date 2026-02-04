@@ -730,6 +730,31 @@ body.dark-mode .submit-btn {
 }
 
 /* ============================================================================
+   ARTICLE IMAGES - Responsive and Mobile-Friendly
+   ============================================================================ */
+.article-body figure {
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.article-body figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border-color);
+  display: block;
+  margin: 0 auto;
+}
+
+.article-body figcaption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-meta);
+  font-style: italic;
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+/* ============================================================================
    FOOTER
    ============================================================================ */
 footer {
@@ -808,6 +833,15 @@ footer {
   
   .article-layout {
     grid-template-columns: 1fr;
+  }
+  
+  .article-body figure {
+    margin: 2rem 0;
+  }
+  
+  .article-body figcaption {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
   }
 }
 
